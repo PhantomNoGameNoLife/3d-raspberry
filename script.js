@@ -439,7 +439,6 @@ const init = () => {
         // Add loaded class to body
         document.body.classList.add('loaded');
         
-        console.log('🍓 Bootstrap Raspberry Bliss website initialized successfully!');
     } catch (error) {
         console.error('Error initializing website:', error);
     }
