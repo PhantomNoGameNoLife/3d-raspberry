@@ -1,0 +1,134 @@
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .hero-title {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+
+    .hero-visual {
+        height: 300px;
+        margin-top: 2rem;
+    }
+
+    .floating-raspberry {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-3d-sphere {
+        width: 150px;
+        height: 150px;
+    }
+
+    .nutrition-chart {
+        width: 250px;
+        height: 250px;
+    }
+
+    .chart-center {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    :root {
+        --section-padding: 3rem 0;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 1rem;
+    }
+
+    .nutrition-chart {
+        width: 200px;
+        height: 200px;
+    }
+
+    .chart-center {
+        width: 100px;
+        height: 100px;
+    }
+
+    .chart-calories {
+        font-size: 1.5rem;
+    }
+
+    .benefit-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .floating-raspberry {
+        width: 30px;
+        height: 30px;
+    }
+
+    .hero-3d-sphere {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .floating-raspberry,
+    .hero-3d-sphere,
+    .nutrition-chart {
+        animation: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .scroll-indicator,
+    .floating-raspberry,
+    .hero-3d-sphere {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+
+    body {
+        background: white;
+    }
+}

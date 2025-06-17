@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Bliss - Nature's Perfect Berry</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand brand-title" href="#home">
+                    <i class="fas fa-seedling me-2"></i>Raspberry Bliss
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#benefits">Benefits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nutrition">Nutrition</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#recipes">Recipes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <!-- Mobile Menu Toggle -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="navbar-toggler-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle ms-3" id="themeToggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title gradient-text">Nature's Perfect <span class="text-primary">Berry</span></h1>
+                    <p class="hero-subtitle mb-4">Discover the incredible health benefits, rich nutrition, and delicious
+                        possibilities of raspberries - nature's antioxidant powerhouse.</p>
+                    <div class="hero-buttons d-flex gap-3">
+                        <a href="#benefits" class="btn btn-primary">
+                            <i class="fas fa-heart me-2"></i>Explore Benefits
+                        </a>
+                        <a href="#recipes" class="btn btn-outline-primary">
+                            <i class="fas fa-utensils me-2"></i>View Recipes
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <div class="floating-raspberry floating-1"></div>
+                        <div class="floating-raspberry floating-2"></div>
+                        <div class="floating-raspberry floating-3"></div>
+                        <div class="floating-raspberry floating-4"></div>
+                        <div class="hero-3d-sphere"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title display-4">Amazing Health Benefits</h2>
+                <p class="section-subtitle">Packed with antioxidants, vitamins, and minerals that support your overall
+                    wellness</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card card h-100 p-4 text-center">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Rich in Antioxidants</h4>
+                        <p>High in vitamin C, quercetin, and ellagic acid that protect against cell damage and reduce
+                            chronic disease risk.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card card h-100 p-4 text-center">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h4>Heart Health</h4>
+                        <p>Support cardiovascular health with fiber and antioxidants that help maintain healthy blood
+                            pressure and cholesterol levels.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card card h-100 p-4 text-center">
+                        <div class="benefit-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h4>Blood Sugar Control</h4>
+                        <p>Low glycemic index and high fiber content help regulate blood sugar levels and improve
+                            insulin sensitivity.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-card card h-100 p-4 text-center">
+                        <div class="benefit-icon">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                        <h4>Weight Management</h4>
+                        <p>Low in calories but high in fiber, helping you feel full longer and supporting healthy weight
+                            management goals.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="benefit-card card h-100 p-4 text-center">
+                        <div class="benefit-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Brain Health</h4>
+                        <p>Antioxidants may improve brain health and help prevent memory loss caused by aging and
+                            oxidative stress.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="benefit-card card h-100 p-4 text-center">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                        <h4>Cancer Protection</h4>
+                        <p>Studies suggest compounds in raspberries may help protect against various types of cancer
+                            through their antioxidant properties.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutrition Section -->
+    <section id="nutrition" class="nutrition py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title display-4">Nutrition Powerhouse</h2>
+                <p class="section-subtitle">Discover the impressive nutritional profile of raspberries per 1 cup (123g)
+                    serving</p>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center" data-aos="flip-left">
+                    <div class="nutrition-chart mx-auto">
+                        <div class="chart-center">
+                            <div class="chart-calories display-4">64</div>
+                            <div class="chart-label">Calories</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-center gap-4 flex-wrap">
+                            <div class="text-center">
+                                <span class="legend-color fiber"></span>
+                                <small class="ms-2">Fiber (32% DV)</small>
+                            </div>
+                            <div class="text-center">
+                                <span class="legend-color vitamin-c"></span>
+                                <small class="ms-2">Vitamin C (54% DV)</small>
+                            </div>
+                            <div class="text-center">
+                                <span class="legend-color manganese"></span>
+                                <small class="ms-2">Manganese (41% DV)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6" data-aos="fade-left" data-aos-delay="100">
+                            <div class="nutrition-item card p-3 text-center">
+                                <div class="h3 text-primary value" data-target="7">0</div>
+                                <small>g</small>
+                                <div class="mt-1">Fiber</div>
+                                <small>32%</small>
+                            </div>
+                        </div>
+
+                        <div class="col-6" data-aos="fade-left" data-aos-delay="200">
+                            <div class="nutrition-item card p-3 text-center">
+                                <div class="h3 text-primary value" data-target="52">0</div>
+                                <small>%</small>
+                                <div class="mt-1">Vitamin C</div>
+                                <small>54%</small>
+                            </div>
+                        </div>
+
+                        <div class="col-6" data-aos="fade-left" data-aos-delay="300">
+                            <div class="nutrition-item card p-3 text-center">
+                                <div class="h3 text-primary value" data-target="39">0</div>
+                                <small>%</small>
+                                <div class="mt-1">Manganese</div>
+                                <small>41%</small>
+                            </div>
+                        </div>
+
+                        <div class="col-6" data-aos="fade-left" data-aos-delay="400">
+                            <div class="nutrition-item card p-3 text-center">
+                                <div class="h3 text-primary value" data-target="11">0</div>
+                                <small>%</small>
+                                <div class="mt-1">Vitamin K</div>
+                                <small>11%</small>
+                            </div>
+                        </div>
+
+                        <div class="col-6" data-aos="fade-left" data-aos-delay="500">
+                            <div class="nutrition-item card p-3 text-center">
+                                <div class="h3 text-primary value" data-target="1.5">0</div>
+                                <small>g</small>
+                                <div class="mt-1">Protein</div>
+                                <small>3%</small>
+                            </div>
+                        </div>
+
+                        <div class="col-6" data-aos="fade-left" data-aos-delay="600">
+                            <div class="nutrition-item card p-3 text-center">
+                                <div class="h3 text-primary value" data-target="14.3">0</div>
+                                <small>g</small>
+                                <div class="mt-1">Carbs</div>
+                                <small>5%</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipes Section -->
+    <section id="recipes" class="recipes py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title display-4">Delicious Recipes</h2>
+                <p class="section-subtitle">Explore creative and healthy ways to enjoy raspberries in your daily meals
+                </p>
+            </div>
+
+            <!-- Recipe Filters -->
+            <div class="recipe-filters text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+                <button class="btn btn-outline-primary active" data-filter="all">
+                    <i class="fas fa-utensils me-2"></i>All Recipes
+                </button>
+                <button class="btn btn-outline-primary" data-filter="breakfast">
+                    <i class="fas fa-coffee me-2"></i>Breakfast
+                </button>
+                <button class="btn btn-outline-primary" data-filter="dessert">
+                    <i class="fas fa-birthday-cake me-2"></i>Dessert
+                </button>
+                <button class="btn btn-outline-primary" data-filter="smoothies">
+                    <i class="fas fa-blender me-2"></i>Smoothies
+                </button>
+                <button class="btn btn-outline-primary" data-filter="healthy">
+                    <i class="fas fa-leaf me-2"></i>Healthy
+                </button>
+            </div>
+
+            <!-- Recipe Cards -->
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="recipe-card card h-100" data-category="breakfast healthy">
+                        <div class="recipe-front">
+                            <img src="./images/raspberry_1.jpg" class="card-img-top" alt="Raspberry Overnight Oats">
+                            <div class="card-body">
+                                <h5 class="card-title">Raspberry Overnight Oats</h5>
+                                <p class="card-text">A nutritious and delicious breakfast that's ready when you wake up.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small>
+                                        <i class="fas fa-clock me-1"></i>5 min prep
+                                    </small>
+                                    <span class="badge bg-success">Easy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipe-back">
+                            <h5>Ingredients</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-primary me-2"></i>1/2 cup rolled oats</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>1/2 cup milk of choice</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>1/4 cup fresh raspberries</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>1 tbsp chia seeds</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>1 tsp honey</li>
+                            </ul>
+                            <p class="mt-3"><strong>Instructions:</strong> Mix all ingredients, refrigerate overnight,
+                                enjoy!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="recipe-card card h-100" data-category="smoothies healthy">
+                        <div class="recipe-front">
+                            <img src="./images/raspberry_2.jpeg" class="card-img-top" alt="Raspberry Protein Smoothie">
+                            <div class="card-body">
+                                <h5 class="card-title">Raspberry Protein Smoothie</h5>
+                                <p class="card-text">A post-workout smoothie packed with protein and antioxidants.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small>
+                                        <i class="fas fa-clock me-1"></i>3 min prep
+                                    </small>
+                                    <span class="badge bg-success">Easy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipe-back">
+                            <h5>Ingredients</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-primary me-2"></i>1 cup frozen raspberries</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>1 scoop protein powder</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>1 banana</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>1 cup almond milk</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>1 tbsp almond butter</li>
+                            </ul>
+                            <p class="mt-3"><strong>Instructions:</strong> Blend until smooth and creamy!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="recipe-card card h-100" data-category="dessert">
+                        <div class="recipe-front">
+                            <img src="./images/raspberry_3.jpeg" class="card-img-top" alt="Raspberry Chia Pudding">
+                            <div class="card-body">
+                                <h5 class="card-title">Raspberry Chia Pudding</h5>
+                                <p class="card-text">A guilt-free dessert that's as beautiful as it is delicious.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small>
+                                        <i class="fas fa-clock me-1"></i>10 min prep
+                                    </small>
+                                    <span class="badge bg-success">Easy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipe-back">
+                            <h5>Ingredients</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-primary me-2"></i>1/4 cup chia seeds</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>1 cup coconut milk</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>1/2 cup raspberries</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>2 tbsp maple syrup</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>1 tsp vanilla</li>
+                            </ul>
+                            <p class="mt-3"><strong>Instructions:</strong> Mix, chill for 4 hours, layer with berries!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="recipe-card card h-100" data-category="dessert">
+                        <div class="recipe-front">
+                            <img src="./images/raspberry_1.jpg" class="card-img-top" alt="Classic Raspberry Tart">
+                            <div class="card-body">
+                                <h5 class="card-title">Classic Raspberry Tart</h5>
+                                <p class="card-text">An elegant dessert perfect for special occasions and dinner
+                                    parties.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small>
+                                        <i class="fas fa-clock me-1"></i>45 min prep
+                                    </small>
+                                    <span class="badge bg-warning">Hard</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipe-back">
+                            <h5>Ingredients</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-primary me-2"></i>Pastry crust</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>2 cups fresh raspberries</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Pastry cream</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Apricot jam</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Powdered sugar</li>
+                            </ul>
+                            <p class="mt-3"><strong>Instructions:</strong> Bake crust, fill with cream, top with
+                                berries!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title display-4">Get In Touch</h2>
+                <p class="section-subtitle">Have questions about raspberries or want to share your own recipes? We'd
+                    love to hear from you!</p>
+            </div>
+
+            <div class="row g-5">
+                <!-- Contact Information -->
+                <div class="col-lg-4">
+                    <div class="contact-item card p-4 mb-4" data-aos="fade-right" data-aos-delay="100">
+                        <div class="d-flex align-items-center">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>Email Us</h5>
+                                <p class="mb-0">hello@raspberrybliss.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item card p-4 mb-4" data-aos="fade-right" data-aos-delay="200">
+                        <div class="d-flex align-items-center">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5>Call Us</h5>
+                                <p class="mb-0">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item card p-4" data-aos="fade-right" data-aos-delay="300">
+                        <div class="d-flex align-items-center">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Visit Us</h5>
+                                <p class="mb-0">123 Berry Lane<br>Fruit Valley, CA 90210</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="contact-form-container card p-4" data-aos="fade-left" data-aos-delay="100">
+                        <form id="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-12" data-aos="fade-up" data-aos-delay="400">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject" required>
+                                </div>
+                                <div class="col-12" data-aos="fade-up" data-aos-delay="500">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <span class="btn-text">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                                        </span>
+                                        <span class="btn-loading d-none">
+                                            <i class="fas fa-spinner fa-spin me-2"></i>Sending...
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="brand-title text-white mb-3">
+                        <i class="fas fa-seedling me-2"></i>Raspberry Bliss
+                    </h5>
+                    <p>Discover the incredible world of raspberries and unlock their amazing health benefits for a
+                        better, healthier lifestyle.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white-50">Home</a></li>
+                        <li><a href="#benefits" class="text-white-50">Benefits</a></li>
+                        <li><a href="#nutrition" class="text-white-50">Nutrition</a></li>
+                        <li><a href="#recipes" class="text-white-50">Recipes</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <h6>Resources</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Health Articles</a></li>
+                        <li><a href="#" class="text-white-50">Recipe Collection</a></li>
+                        <li><a href="#" class="text-white-50">Nutrition Guide</a></li>
+                        <li><a href="#" class="text-white-50">Growing Tips</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h6>Newsletter</h6>
+                    <p class="text-white-50">Subscribe to get the latest recipes and health tips!</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Raspberry Bliss. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-50">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
