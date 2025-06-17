@@ -30,7 +30,7 @@ loader.load('./raspberry2.glb',
 const renderer = new THREE.WebGLRenderer({
     alpha: true
 });
-const bodyHeight = document.body.clientHeight || window.innerHeight;
+const bodyHeight = document.body.clientHeight;
 renderer.setSize(window.innerWidth, bodyHeight);
 document.getElementById('container3D').appendChild(renderer.domElement);
 
@@ -65,27 +65,27 @@ function getXByScreenPercent(percent) {
 let arrPositionModel = [
     {
         id: 'home',
-        position: { x: getXByScreenPercent(2800), y: 35, z: -100 },
+        position: { x: getXByScreenPercent(2800), y: 34, z: -100 },
         rotation: { x: 0.1, y: 1.5, z: 0 }
     },
     {
         id: 'benefits',
-        position: { x: getXByScreenPercent(200), y: 30, z: -200 },
+        position: { x: getXByScreenPercent(200), y: 29, z: -200 },
         rotation: { x: 0.15, y: 0, z: 0 }
     },
     {
         id: 'nutrition',
-        position: { x: getXByScreenPercent(-4000), y: 9.4, z: -350 },
+        position: { x: getXByScreenPercent(-4000), y: 8.4, z: -350 },
         rotation: { x: 0, y: 0, z: 0 }
     },
     {
         id: 'recipes',
-        position: { x: getXByScreenPercent(-7500), y: -24.5, z: -300 },
+        position: { x: getXByScreenPercent(-7500), y: -25.5, z: -300 },
         rotation: { x: 0, y: 0, z: 0 }
     },
     {
         id: 'contact',
-        position: { x: getXByScreenPercent(4500), y: -47, z: -600 },
+        position: { x: getXByScreenPercent(4500), y: -48, z: -600 },
         rotation: { x: 0, y: 0, z: 0 }
     },
 ];
@@ -158,6 +158,7 @@ const modelMove = () => {
 
 if (window.innerWidth <= 567) {
     camera.position.z = 600;
+    camera.fov = 10.1;
     camera.updateProjectionMatrix();
 }
 
