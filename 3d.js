@@ -14,8 +14,7 @@ loader.load('./raspberry2.glb',
         raspberry = gltf.scene;
         raspberry.position.z = 0.4;
         if (window.innerWidth <= 567) {
-            raspberry.position.y = 65;
-            raspberry.scale.set(1, 0.08, 1);
+            raspberry.position.y = 50;
         } else {
             raspberry.position.y = 40;
             raspberry.scale.set(1, 0.15, 1);
@@ -30,8 +29,14 @@ loader.load('./raspberry2.glb',
 const renderer = new THREE.WebGLRenderer({
     alpha: true
 });
-const bodyHeight = document.body.clientHeight;
-renderer.setSize(window.innerWidth, bodyHeight);
+
+if (window.innerWidth <= 567) {
+    document.getElementById('container3D').style.position = 'fixed'
+    renderer.setSize(window.innerWidth, window.innerHeight);
+} else {
+    const bodyHeight = document.body.clientHeight;
+    renderer.setSize(window.innerWidth, bodyHeight);
+}
 document.getElementById('container3D').appendChild(renderer.domElement);
 
 const ambientLight = new THREE.AmbientLight(0xffffff, .7);
@@ -47,7 +52,7 @@ const reRender3D = () => {
         raspberry.rotation.y += 0.01;
         const scale = 1 + Math.abs(Math.sin(Date.now() * 0.0015)) * 0.1;
         if (window.innerWidth <= 567) {
-            raspberry.scale.set(scale, 0.08 * scale, scale);
+            raspberry.scale.set(scale, scale, scale);
         } else {
             raspberry.scale.set(scale, 0.15 * scale, scale);
         }
@@ -93,12 +98,12 @@ let arrPositionModel = [
 let arrPositionModelPhone = [
     {
         id: 'home',
-        position: { x: getXByScreenPercent(0), y: 51.5, z: -100 },
+        position: { x: getXByScreenPercent(0), y: -50, z: -100 },
         rotation: { x: 0.1, y: 1.5, z: 0 }
     },
     {
         id: 'benefits',
-        position: { x: getXByScreenPercent(200), y: 47.2, z: -200 },
+        position: { x: getXByScreenPercent(7500), y: 0, z: -200 },
         rotation: { x: 0.15, y: 0, z: 0 }
     },
     {
@@ -108,7 +113,7 @@ let arrPositionModelPhone = [
     },
     {
         id: 'recipes',
-        position: { x: getXByScreenPercent(0), y: 0, z: -300 },
+        position: { x: getXByScreenPercent(-7500), y: 0, z: -300 },
         rotation: { x: 0, y: 0, z: 0 }
     },
     {
