@@ -55,11 +55,11 @@ const toggleTheme = () => {
     
     if (state.isDarkMode) {
         body.classList.remove('light-mode');
-        themeIcon.className = 'fas fa-moon';
+        themeIcon.className = 'fas fa-sun';
         localStorage.setItem('theme', 'dark');
     } else {
         body.classList.add('light-mode');
-        themeIcon.className = 'fas fa-sun';
+        themeIcon.className = 'fas fa-moon';
         localStorage.setItem('theme', 'light');
     }
 };

@@ -88,6 +88,7 @@ body {
     -moz-transition: background var(--transition-normal), color var(--transition-normal);
     -ms-transition: background var(--transition-normal), color var(--transition-normal);
     -o-transition: background var(--transition-normal), color var(--transition-normal);
+    position: relative;
 }
 
 ::selection {
@@ -119,6 +120,23 @@ body {
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--primary) var(--bg-color);
+}
+
+/* 3D Container */
+#container3D {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#container3D canvas {
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 a {
@@ -419,7 +437,7 @@ section:nth-of-type(odd) {
     position: relative;
 }
 
-.benefits .row>div:hover {
+.benefits .row > div:hover {
     position: relative;
     z-index: 2;
 }
@@ -461,7 +479,7 @@ section:nth-of-type(odd) {
     background: var(--bg-color);
 }
 
-.nutrition .row>div:hover {
+.nutrition .row .row >div:hover {
     position: relative;
     z-index: 2;
 }
