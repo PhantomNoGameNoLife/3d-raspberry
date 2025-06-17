@@ -131,7 +131,7 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 10;
+    z-index: 1;
 }
 
 #container3D canvas {
@@ -275,7 +275,7 @@ small {
     min-height: calc(100dvh - 70px);
     background: linear-gradient(135deg, var(--bg-color) 0%, var(--card-bg) 100%);
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .hero img {
@@ -307,6 +307,8 @@ small {
 
 .hero-buttons {
     animation: fadeInUp 1s ease-out 0.4s both;
+    position: relative;
+    z-index: 2;
 }
 
 /* Button Styles */
@@ -438,7 +440,7 @@ section:nth-of-type(odd) {
     position: relative;
 }
 
-.benefits .row>div:hover {
+.benefits .row>div {
     position: relative;
     z-index: 2;
 }
@@ -447,7 +449,7 @@ section:nth-of-type(odd) {
     transition: all var(--transition-normal);
     border-radius: var(--border-radius-lg);
     height: 100%;
-    background: var(--card-bg);
+    background: #2e2e4a80;
     box-shadow: var(--shadow-sm);
     color: var(--text-color);
 }
@@ -480,6 +482,7 @@ section:nth-of-type(odd) {
     background: var(--bg-color);
 }
 
+.nutrition .container,
 .nutrition .row .row>div:hover {
     position: relative;
     z-index: 2;
@@ -543,7 +546,7 @@ section:nth-of-type(odd) {
 .nutrition-item {
     transition: all var(--transition-normal);
     border-radius: var(--border-radius);
-    background: var(--card-bg);
+    background: #2e2e4a80;
     box-shadow: var(--shadow-sm);
     color: var(--text-color);
 }
@@ -559,6 +562,7 @@ section:nth-of-type(odd) {
     position: relative;
 }
 
+.recipes .container,
 .recipes .row>div:hover {
     position: relative;
     z-index: 2;
@@ -579,7 +583,7 @@ section:nth-of-type(odd) {
     overflow: hidden;
     perspective: 1000px;
     cursor: pointer;
-    background: var(--card-bg);
+    background: #2e2e4a80;
     box-shadow: var(--shadow-sm);
 }
 
@@ -626,10 +630,15 @@ section:nth-of-type(odd) {
     background: var(--bg-color);
 }
 
+.contact .container {
+    position: relative;
+    z-index: 2;
+}
+
 .contact-item {
     transition: all var(--transition-normal);
     border-radius: var(--border-radius-lg);
-    background: var(--card-bg);
+    background: #2e2e4a80;
     box-shadow: var(--shadow-sm);
     color: var(--text-color);
 }
@@ -653,9 +662,13 @@ section:nth-of-type(odd) {
 
 .contact-form-container {
     border-radius: var(--border-radius-lg);
-    background: var(--card-bg);
+    background: #2e2e4a80;
     box-shadow: var(--shadow);
     color: var(--text-color);
+    -webkit-border-radius: var(--border-radius-lg);
+    -moz-border-radius: var(--border-radius-lg);
+    -ms-border-radius: var(--border-radius-lg);
+    -o-border-radius: var(--border-radius-lg);
 }
 
 .form-control {
@@ -681,6 +694,12 @@ section:nth-of-type(odd) {
 .footer {
     background: var(--primary-dark) !important;
     color: white;
+    overflow: hidden;
+}
+
+.footer .container {
+    position: relative;
+    z-index: 2;
 }
 
 .social-link {

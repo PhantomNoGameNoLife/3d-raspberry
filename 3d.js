@@ -80,7 +80,7 @@ let arrPositionModel = [
     },
     {
         id: 'nutrition',
-        position: { x: getXByScreenPercent(-4000), y: 8.4, z: -350 },
+        position: { x: getXByScreenPercent(-1000), y: 8.4, z: -350 },
         rotation: { x: 0, y: 0, z: 0 }
     },
     {
