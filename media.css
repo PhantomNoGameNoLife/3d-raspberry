@@ -74,6 +74,11 @@
 }
 
 @media (max-width: 575.98px) {
+    .img1,
+    .img2 {
+        width: 300px;
+    }
+
     .hero-title {
         font-size: 2rem;
     }
@@ -95,10 +100,25 @@
         width: 100px;
         height: 100px;
     }
+
+    .recipe-front img {
+        aspect-ratio: 16 / 9;
+    }
+
+    .recipe-filters {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .recipe-filters button {
+        max-width: 150px;
+    }
 }
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -116,6 +136,7 @@
 
 /* Print Styles */
 @media print {
+
     .header,
     .scroll-indicator,
     .floating-raspberry,
